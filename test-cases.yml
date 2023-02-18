@@ -1,0 +1,34 @@
+---
+ - summary: |
+     регистрация на сайте
+   requirement: |
+     У пользователя должен быть личный кабинет
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Открыта главная страница сайта https://codebattle.hexlet.io
+   steps:
+     - нажимаем кнопку "Sign up"
+     - Nickname = "Goryaminskaya"
+     - Email = "goryaminskaya@yandex.ru"
+     - Password = "Qwerty1"
+     - нажимаем кнопку "Submit"
+   expected-result: |
+     Вход в систему, появление аккаунта
+     
+ - summary: |
+     регистрация на сайте
+   requirement: |
+     У пользователя должен быть личный кабинет
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Открыта главная страница сайта https://codebattle.hexlet.io
+   steps:
+     - нажимаем кнопку "Sign up"
+     - Nickname = "Goryaminskaya"
+     - Email = "goryaminskaya@yandex.ru"
+     - Password = "Qwerty1"
+     - нажимаем кнопку "Submit"
+   expected-result: |
+     Вход в систему, появление аккаунта   
