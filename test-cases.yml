@@ -6,18 +6,18 @@
    prerequisites: |
      Открыта страница сайта https://codebattle.hexlet.io
    test-data: |
-     Открыта главная страница сайта https://codebattle.hexlet.io
+     Nickname = Goryaminskaya, Email = goryaminskaya@yandex.ru Password = Qwerty1
    steps:
      - нажимаем кнопку "Sign up"
-     - Nickname = "Goryaminskaya"
-     - Email = "goryaminskaya@yandex.ru"
-     - Password = "Qwerty1"
+     - вводим Nickname 
+     - вводим Email 
+     - вводим Password
      - нажимаем кнопку "Submit"
    expected-result: |
-     Вход в систему, появление аккаунта
+     У пользователя появляется аккаунт
      
  - summary: |
-     регистрация на сайте
+     Проверка входа пользователя с несуществующими логином и паролем
    requirement: |
      У пользователя должен быть личный кабинет
    prerequisites: |
