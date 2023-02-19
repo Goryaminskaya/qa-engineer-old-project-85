@@ -23,12 +23,80 @@
    prerequisites: |
      Открыта страница сайта https://codebattle.hexlet.io
    test-data: |
-     Открыта главная страница сайта https://codebattle.hexlet.io
+     Nickname = Goryaminskaya1, Email = goryaminskaya@mail.ru Password = Qwerty1
    steps:
      - нажимаем кнопку "Sign up"
-     - Nickname = "Goryaminskaya"
-     - Email = "goryaminskaya@yandex.ru"
+     - Nickname = "Goryaminskaya1"
+     - Email = "goryaminskaya@mail.ru"
      - Password = "Qwerty1"
      - нажимаем кнопку "Submit"
    expected-result: |
-     Вход в систему, появление аккаунта   
+     Сообщение о том, что аккаунта с таким именем не существует
+     
+ - summary: |
+     Проверка при большом трафике (1000 едениц пользователей)
+   requirement: |
+     Сайт должен быть способен обрабатывать большое количество трафика (например, 1000 одновременных пользователей)
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     На сайте одновременно участвуют в батлах 1000 пользователей
+   steps:
+     - на сайте активны 1000 аккаунтов
+   expected-result: |
+     Сайт работает в обычном режиме
+     
+ - summary: |
+     Тест на возможность играть с ботом
+   requirement: |
+     Пользователь должен иметь возможность играть с ботом
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Пользователь зашел на сайт под своим аккаунтом
+   steps:
+     - нажать "Create a game"
+     - выбрать задание
+     - выбрать сложность задания
+     - "game tipe" = "with a bot"
+     - выбрать ограничение по времени = 8 min
+     - Choose task by name or tags = "random task"
+     - нажать "Create a batlle"
+   expected-result: |
+     Начинается батл с ботом 
+     
+ - summary: |
+     Тест на возможность играть с другом
+   requirement: |
+     Пользователь должен иметь возможность играть с другом (ссылка-приглашение к битве)
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Пользователь зашел на сайт под своим аккаунтом
+   steps:
+     - нажать "Create a game"
+     - выбрать задание
+     - выбрать сложность задания
+     - "game tipe" = "with a freind"
+     - выбрать ограничение по времени = 8 min
+     - Choose opponent - из выпадающего списка выбираем любого пользователя
+     - Choose task by name or tags = "random task"
+     - нажать "Create a batlle"
+   expected-result: |
+     Выбранный пользователь получает приглашение
+     
+ - summary: |
+     Тест на отображение в рейтинге
+   requirement: |
+     Каждый пользователь участвует в рейтинге (недельном, месячном, за весь период существования сайта)
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Пользователь зашел на сайт под своим аккаунтом
+   steps:
+     - нажимаем кнопку "TOPlist"
+     - нажимаем кнопку "Weekly" 
+     - нажимаем кнопку "Monthly" 
+     - нажимаем кнопку "Total"
+   expected-result: |
+     Пользователь может увидеть весь рейтинг
