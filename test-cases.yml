@@ -1,12 +1,14 @@
 ---
  - summary: |
-     регистрация на сайте
+     регистрация на сайте. Тест 1
    requirement: |
      У пользователя должен быть личный кабинет
    prerequisites: |
      Открыта страница сайта https://codebattle.hexlet.io
    test-data: |
-     Nickname = Goryaminskaya, Email = goryaminskaya@yandex.ru Password = Qwerty1
+     Nickname = Goryaminskaya
+     Email = goryaminskaya@yandex.ru 
+     Password = Qwerty1
    steps:
      - нажимаем кнопку "Sign up"
      - вводим Nickname 
@@ -17,22 +19,226 @@
      У пользователя появляется аккаунт
      
  - summary: |
-     Проверка входа пользователя с несуществующими логином и паролем
+     Входа пользователя с существующими логином и паролем. Тест 2
    requirement: |
-     У пользователя должен быть личный кабинет
+     Для входа в аккаунт легин и пароль должны быть корректны
    prerequisites: |
      Открыта страница сайта https://codebattle.hexlet.io
    test-data: |
-     Nickname = Goryaminskaya1, Email = goryaminskaya@mail.ru Password = Qwerty1
+     Nickname = Goryaminskaya
+     Email = goryaminskaya@yandex.ru 
+     Password = 123456
    steps:
      - нажимаем кнопку "Sign up"
-     - Nickname = "Goryaminskaya1"
-     - Email = "goryaminskaya@mail.ru"
-     - Password = "Qwerty1"
+     - Вводим Nickname
+     - Вводим Email
+     - Вводим Password
      - нажимаем кнопку "Submit"
    expected-result: |
-     Сообщение о том, что аккаунта с таким именем не существует
-         
+     Вход в аккаунт
+     
+ - summary: |
+     Вход пользователя с незарегистрированным логином и паролем. Тест 3 (нег.)
+   requirement: |
+     Для входа в аккаунт легин и пароль должны быть корректны
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Nickname = Goryaminskaya1
+     Email = goryaminskaya@mail.ru
+     Password = Qwerty1
+   steps:
+     - нажимаем кнопку "Sign up"
+     - Вводим Nickname
+     - Вводим Email
+     - Вводим Password
+     - нажимаем кнопку "Submit"
+   expected-result: |
+     Сообщение о том, что аккаунта с таким email не существует
+     
+ - summary: |
+     Вход пользователя с неправильным паролем. Тест 4
+   requirement: |
+     Для входа в аккаунт логин и пароль должны быть корректны
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Nickname = Goryaminskaya
+     Email = goryaminskaya@yandex.ru
+     Password = Qwerty2
+   steps:
+     - нажимаем кнопку "Sign up"
+     - Вводим Nickname
+     - Вводим Email
+     - Вводим Password
+     - нажимаем кнопку "Submit"
+   expected-result: |
+     Сообщение о том, что  email неправильный
+  
+ - summary: |
+     Вход пользователя без ввода емейл и пароля. Тест 5 (нег.)
+   requirement: |
+     Для входа в аккаунт логин и пароль должны быть корректны
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     -
+   steps:
+     - нажимаем кнопку "Sign up"
+     - Поле Email пустое
+     - Поле Password пустое
+     - нажимаем кнопку "Submit"
+   expected-result: |
+     Сообщение о том, что  email  "Email required" и пароль "Password required"
+     
+ - summary: |
+     Восстановление забытого пароля. Тест 6.
+   requirement: |
+     Зарегистрированный пользователь может восстановить забытый пароль по "email".
+   prerequisites:
+     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password).
+   test-data: |
+     "Email" = "goryaminskaya@yandex.ru"
+     "Password"(new) = "Qwerty2"
+   steps:
+     - Нажимаем на надпись "Forgot your password?" под полем ввода password
+     - Вводим "Email"
+     - Нажимаем кнопку "Submit"
+     - Заходим на страницу почты пользователя
+     - Открываем письмо от noreply@codebattle-5f929.firebaseapp.com
+     - Нажимаем на ссылку в теле письма
+     - На странице "Reset your password" вводим новый пароль
+     - Нажимаем кнопку "Save"
+     - Переходим на страницу (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password)
+     - Вводим "Email"
+     - Вводим "Password"
+     - Нажимаем кнопку "Submit"
+   expected-result: |
+     Отображена главная страница "CodeBattle" (https://codebattle.hexlet.io/#lobby)
+     В правом верхнем углу отображены данные (аватар, Nickname) указанного пользователя.
+     
+ - summary: |
+     Вход пользователя по Discord. Тест 7
+   requirement: |
+     Пользователь может войти без регистрации на сайт, используя аккаунт Discord
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Пользователь зарегистриован на https://discord.com/
+   steps:
+     - нажимаем кнопку "Sign up"
+     - нажимаем кнопку "Sign in with Discord"
+     - на редиректе Discord нажать "Авторизовать"
+   expected-result: |
+     Вход в аккаунт, отображена главная страница сайта https://codebattle.hexlet.io
+    
+ - summary: |
+     Вход пользователя по Github. Тест 8
+   requirement: |
+      - Пользователь может войти без регистрации на сайт, используя аккаунт Github
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Пользователь зарегистриован на https://github.com/
+   steps:
+     - нажимаем кнопку "Sign up"
+     - нажимаем кнопку "Sign in with Github"
+     - на редиректе Github нажать "Авторизовать"
+   expected-result: |
+     Вход в аккаунт, отображена главная страница сайта https://codebattle.hexlet.io
+     
+ - summary: |
+     регистрация на сайте пользователя с паролем менее 6 знаков. Тест 9
+   requirement: |
+     Пароль должен содержать не менее 6 символов русского, английского языка или спецсимволов
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Nickname = Екатеринa
+     Email = goryaminskaya1@yandex.ru
+     Password = 123
+   steps:
+     - нажимаем кнопку "Sign up"
+     - вводим Nickname 
+     - вводим Email 
+     - вводим Password
+     - нажимаем кнопку "Submit"
+   expected-result: |
+     Аккаунт не регистрируется: появляется предупреждение "WEAK_PASSWORD : Password should be at least 6 characters"
+          
+ - summary: |
+     регистрация на сайте пользователя с неуникальный Nickname. Тест 10
+   requirement: |
+     У пользователя должен быть уникальный Nickname
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Nickname = Goryaminskaya
+     Email = goryaminskaya@yandex.ru
+     Password = 123456
+   steps:
+     - нажимаем кнопку "Sign up"
+     - вводим Nickname 
+     - вводим Email 
+     - нажимаем кнопку "Submit" 
+   expected-result: |
+     Аккаунт не регистрируется: появляется предупреждение: Nickname is already taken
+     
+ - summary: |
+     регистрация на сайте пользователя с некорректным email. Тест 11
+   requirement: |
+     При регистрации у пользователя должен быть корректный email
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Nickname = Goryaminskaya
+     Email = goryaminskayaнетпароля.ru
+     Password = 123456
+   steps:
+     - нажимаем кнопку "Sign up"
+     - вводим Nickname 
+     - вводим Email 
+     - нажимаем кнопку "Submit" 
+   expected-result: |
+     Аккаунт не регистрируется: появляется предупреждение: Invalid email
+     
+ - summary: |
+     регистрация на сайте пользователя с именем не менее 3 символов. Тест 12
+   requirement: |
+     При регистрации у пользователя должно быть имя длиной менее 3 символов
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Nickname = ЕА
+     Email = goryaminskaya@yandex.ru
+     Password = 123456
+   steps:
+     - нажимаем кнопку "Sign up"
+     - вводим Nickname 
+     - вводим Email 
+     - нажимаем кнопку "Submit" 
+   expected-result: |
+     Аккаунт не регистрируется: появляется предупреждение "Should be at least 3 characters"
+    
+ - summary: |
+     регистрация на сайте пользователя с неуникальным email. Тест 13
+   requirement: |
+     У пользователя должен быть уникальный email
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     Nickname = Goryaminskaya2
+     Email = goryaminskaya@yandex.ru
+     Password = 123456
+   steps:
+     - нажимаем кнопку "Sign up"
+     - вводим Nickname 
+     - вводим Email 
+     - нажимаем кнопку "Submit" 
+   expected-result: |
+     Аккаунт не регистрируется: появляется предупреждение: Email is already taken
+     
+    
  - summary: |
      Тест на возможность играть с ботом
    requirement: |
