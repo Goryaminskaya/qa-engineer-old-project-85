@@ -237,10 +237,94 @@
      - нажимаем кнопку "Submit" 
    expected-result: |
      Аккаунт не регистрируется: появляется предупреждение: Email is already taken
+   
+ - summary: |
+     Пользователь создает игру. Тест 14
+   requirement: |
+     Пользователь может создавать игру
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     -
+   steps:
+     - нажать "Create a game"
+   expected-result: |
+     Открываются настройки для создания игры
+ 
+ - summary: |
+     Пользователь изменяет настройки игры при создании игры. Тест 15
+   requirement: |
+    Пользователь может изменять настройки в разделе создания игры
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     - Level = "1"
+     - Game tipe = "with other users"
+     - Time control = 8 min
+     - Choose task by name or tags = "random task"
+   steps:
+     - нажать "Create a game" 
+     - выбрать Level
+     - выбрать Game tipe
+     - выбрать Time control
+     - выбрать Choose task by name or tags
+     - нажать "Create a batlle"
+   expected-result: |
+     Начинается батл с любым игроком   
      
+ - summary: |
+      Пользователь изменяет уровни сложности игры в настройка при создании игры.Тест 16
+   requirement: |
+    Пользователь может изменять сложность игры
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     - Level = "4"
+   steps:
+     - нажать "Create a game"
+     - выбрать Level
+   expected-result: |
+     Сложность установлена 4  
+   
+ - summary: |
+     Пользователь изменяет сложность игры с 1 до 4.Тест 17
+   requirement: |
+    Пользователю доступны 4 уровня игры
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     - Level 1 = "1"
+     - Level 2 = "4"
+   steps:
+     - нажать "Create a game"
+     - выбрать Level 1
+     - выбрать Level 2
+   expected-result: |
+     Сложность изменена с 1 до 4  
+     
+ - summary: |
+     Пользователь изменяет Game tipe создании игры. Тест 18
+   requirement: |
+    Пользователь может изменять тип игры в настройках при создании игры
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     - Level = "1"
+     - Game tipe = "with other users"
+     - Time control = 8 min
+     - Choose task by name or tags = "random task"
+   steps:
+     - нажать "Create a game" 
+     - выбрать Level
+     - выбрать Game tipe
+     - выбрать Time control
+     - выбрать Choose task by name or tags
+     - нажать "Create a batlle"
+   expected-result: |
+     Начинается батл с любым игроком   
     
  - summary: |
-     Пользователь может играть с ботом
+     Пользователь может играть с ботом Тест 19
    requirement: |
      Пользователь должен иметь возможность играть с ботом
    prerequisites: |
