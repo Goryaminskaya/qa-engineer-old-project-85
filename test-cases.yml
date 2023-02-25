@@ -303,64 +303,110 @@
      Сложность изменена с 1 до 4  
      
  - summary: |
-     Пользователь изменяет Game tipe создании игры. Тест 18
+     Пользователь изменяет Game tipe при создании игры. Тест 18
    requirement: |
     Пользователь может изменять тип игры в настройках при создании игры
    prerequisites: |
      Открыта страница сайта https://codebattle.hexlet.io
    test-data: |
      - Level = "1"
-     - Game tipe = "with other users"
-     - Time control = 8 min
-     - Choose task by name or tags = "random task"
+     - Game tipe 1 = "with other users"
+     - Game tipe 2 = "with a bot"
    steps:
      - нажать "Create a game" 
      - выбрать Level
-     - выбрать Game tipe
-     - выбрать Time control
-     - выбрать Choose task by name or tags
+     - выбрать Game tipe 1
+     - выбрать Game tipe 2
      - нажать "Create a batlle"
    expected-result: |
-     Начинается батл с любым игроком   
+     Начинается любая игра с ботом   
     
  - summary: |
      Пользователь может играть с ботом Тест 19
    requirement: |
-     Пользователь должен иметь возможность играть с ботом
+     Пользователю доступн "Game type" - "with a bot"
    prerequisites: |
      Открыта страница сайта https://codebattle.hexlet.io
    test-data: |
-     Пользователь зашел на сайт под своим аккаунтом
+     - Level = 1
+     - Game tipe = "with a bot"
+     - Time control = 8 min
+     - Choose task by name or tags = "random task"
    steps:
      - нажать "Create a game"
-     - выбрать задание
-     - выбрать сложность задания
-     - "game tipe" = "with a bot"
-     - выбрать ограничение по времени = 8 min
-     - Choose task by name or tags = "random task"
+     - выбрать Level
+     - выбрать Game tipe
+     - выбрать Time control
+     - Choose task by name or tags 
      - нажать "Create a batlle"
    expected-result: |
      Начинается батл с ботом 
      
  - summary: |
-     Тест на возможность играть с другом
+     Пользователь может играть с другом Тест 20
    requirement: |
-     Пользователь должен иметь возможность играть с другом (ссылка-приглашение к битве)
+     Пользователю доступен "Game type" - "with a friend" (ссылка-приглашение к битве)
    prerequisites: |
      Открыта страница сайта https://codebattle.hexlet.io
    test-data: |
-     Пользователь зашел на сайт под своим аккаунтом
+     - Level = 1
+     - Game tipe = "with a freind"
+     - Time control = 8 min
+     - Choose task by name or tags = "random task"
    steps:
      - нажать "Create a game"
-     - выбрать задание
-     - выбрать сложность задания
-     - "game tipe" = "with a freind"
-     - выбрать ограничение по времени = 8 min
+     - выбрать Level
+     - выбрать Game tipe
+     - выбрать Time control
      - Choose opponent - из выпадающего списка выбираем любого пользователя
      - Choose task by name or tags = "random task"
      - нажать "Create a batlle"
    expected-result: |
      Выбранный пользователь получает приглашение
+     
+ - summary: |
+     Пользователь может играть с любым пользователем Тест 21
+   requirement: |
+     Пользователю доступен "Game type" - "with other users"
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     - Level = 1
+     - Game tipe = "with other users"
+     - Time control = 8 min
+     - Choose task by name or tags = "random task"
+   steps:
+     - нажать "Create a game"
+     - выбрать Level
+     - выбрать Game tipe
+     - выбрать Time control
+     - Choose opponent - из выпадающего списка выбираем любого пользователя
+     - Choose task by name or tags = "random task"
+     - нажать "Create a batlle"
+   expected-result: |
+     Выбранный пользователь получает приглашение   
+     
+ - summary: |
+     Пользователь может выбрать количество времени, отведенное на задание  Тест 21
+   requirement: |
+      - Пользователю доступен выбор количества времени "Time control" при создании игры
+   prerequisites: |
+     Открыта страница сайта https://codebattle.hexlet.io
+   test-data: |
+     - Level = 1
+     - Game tipe = "with a freind"
+     - Time control = 8 min
+     - Choose task by name or tags = "random task"
+   steps:
+     - нажать "Create a game"
+     - выбрать Level
+     - выбрать Game tipe
+     - выбрать Time control
+     - Choose opponent - из выпадающего списка выбираем любого пользователя
+     - Choose task by name or tags = "random task"
+     - нажать "Create a batlle"
+   expected-result: |
+     Выбранный пользователь получает приглашение 
      
  - summary: |
      Тест на отображение в рейтинге
