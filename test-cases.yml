@@ -1,510 +1,510 @@
 ---
- - summary: |
-     регистрация на сайте. Тест 1
-   requirement: |
-     У пользователя должен быть личный кабинет
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Nickname = Goryaminskaya
-     Email = goryaminskaya@yandex.ru 
-     Password = Qwerty1
-   steps:
-     - нажимаем кнопку "Sign up"
-     - вводим Nickname 
-     - вводим Email 
-     - вводим Password
-     - нажимаем кнопку "Submit"
-   expected-result: |
-     У пользователя появляется аккаунт
-     
- - summary: |
-     Входа пользователя с существующими логином и паролем. Тест 2
-   requirement: |
-     Для входа в аккаунт легин и пароль должны быть корректны
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Nickname = Goryaminskaya
-     Email = goryaminskaya@yandex.ru 
-     Password = 123456
-   steps:
-     - нажимаем кнопку "Sign up"
-     - Вводим Nickname
-     - Вводим Email
-     - Вводим Password
-     - нажимаем кнопку "Submit"
-   expected-result: |
-     Вход в аккаунт
-     
- - summary: |
-     Вход пользователя с незарегистрированным логином и паролем. Тест 3 (нег.)
-   requirement: |
-     Для входа в аккаунт легин и пароль должны быть корректны
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Nickname = Goryaminskaya1
-     Email = goryaminskaya@mail.ru
-     Password = Qwerty1
-   steps:
-     - нажимаем кнопку "Sign up"
-     - Вводим Nickname
-     - Вводим Email
-     - Вводим Password
-     - нажимаем кнопку "Submit"
-   expected-result: |
-     Сообщение о том, что аккаунта с таким email не существует
-     
- - summary: |
-     Вход пользователя с неправильным паролем. Тест 4
-   requirement: |
-     Для входа в аккаунт логин и пароль должны быть корректны
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Nickname = Goryaminskaya
-     Email = goryaminskaya@yandex.ru
-     Password = Qwerty2
-   steps:
-     - нажимаем кнопку "Sign up"
-     - Вводим Nickname
-     - Вводим Email
-     - Вводим Password
-     - нажимаем кнопку "Submit"
-   expected-result: |
-     Сообщение о том, что  email неправильный
-  
- - summary: |
-     Вход пользователя без ввода емейл и пароля. Тест 5 (нег.)
-   requirement: |
-     Для входа в аккаунт логин и пароль должны быть корректны
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     -
-   steps:
-     - нажимаем кнопку "Sign up"
-     - Поле Email пустое
-     - Поле Password пустое
-     - нажимаем кнопку "Submit"
-   expected-result: |
-     Сообщение о том, что  email  "Email required" и пароль "Password required"
-     
- - summary: |
-     Восстановление забытого пароля. Тест 6.
-   requirement: |
-     Зарегистрированный пользователь может восстановить забытый пароль по "email".
-   prerequisites:
-     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password).
-   test-data: |
-     "Email" = "goryaminskaya@yandex.ru"
-     "Password"(new) = "Qwerty2"
-   steps:
-     - Нажимаем на надпись "Forgot your password?" под полем ввода password
-     - Вводим "Email"
-     - Нажимаем кнопку "Submit"
-     - Заходим на страницу почты пользователя
-     - Открываем письмо от noreply@codebattle-5f929.firebaseapp.com
-     - Нажимаем на ссылку в теле письма
-     - На странице "Reset your password" вводим новый пароль
-     - Нажимаем кнопку "Save"
-     - Переходим на страницу (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password)
-     - Вводим "Email"
-     - Вводим "Password"
-     - Нажимаем кнопку "Submit"
-   expected-result: |
-     Отображена главная страница "CodeBattle" (https://codebattle.hexlet.io/#lobby)
-     В правом верхнем углу отображены данные (аватар, Nickname) указанного пользователя.
-     
- - summary: |
-     Вход пользователя по Discord. Тест 7
-   requirement: |
-     Пользователь может войти без регистрации на сайт, используя аккаунт Discord
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Пользователь зарегистриован на https://discord.com/
-   steps:
-     - нажимаем кнопку "Sign up"
-     - нажимаем кнопку "Sign in with Discord"
-     - на редиректе Discord нажать "Авторизовать"
-   expected-result: |
-     Вход в аккаунт, отображена главная страница сайта https://codebattle.hexlet.io
+- summary: |
+    регистрация на сайте. Тест 1
+  requirement: |
+    У пользователя должен быть личный кабинет
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Nickname = Goryaminskaya
+    Email = goryaminskaya@yandex.ru 
+    Password = Qwerty1
+  steps:
+    - нажимаем кнопку "Sign up"
+    - вводим Nickname 
+    - вводим Email 
+    - вводим Password
+    - нажимаем кнопку "Submit"
+  expected-result: |
+    У пользователя появляется аккаунт
     
- - summary: |
-     Вход пользователя по Github. Тест 8
-   requirement: |
-      - Пользователь может войти без регистрации на сайт, используя аккаунт Github
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Пользователь зарегистриован на https://github.com/
-   steps:
-     - нажимаем кнопку "Sign up"
-     - нажимаем кнопку "Sign in with Github"
-     - на редиректе Github нажать "Авторизовать"
-   expected-result: |
-     Вход в аккаунт, отображена главная страница сайта https://codebattle.hexlet.io
-     
- - summary: |
-     регистрация на сайте пользователя с паролем менее 6 знаков. Тест 9
-   requirement: |
-     Пароль должен содержать не менее 6 символов русского, английского языка или спецсимволов
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Nickname = Екатеринa
-     Email = goryaminskaya1@yandex.ru
-     Password = 123
-   steps:
-     - нажимаем кнопку "Sign up"
-     - вводим Nickname 
-     - вводим Email 
-     - вводим Password
-     - нажимаем кнопку "Submit"
-   expected-result: |
-     Аккаунт не регистрируется: появляется предупреждение "WEAK_PASSWORD : Password should be at least 6 characters"
-          
- - summary: |
-     регистрация на сайте пользователя с неуникальный Nickname. Тест 10
-   requirement: |
-     У пользователя должен быть уникальный Nickname
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Nickname = Goryaminskaya
-     Email = goryaminskaya@yandex.ru
-     Password = 123456
-   steps:
-     - нажимаем кнопку "Sign up"
-     - вводим Nickname 
-     - вводим Email 
-     - нажимаем кнопку "Submit" 
-   expected-result: |
-     Аккаунт не регистрируется: появляется предупреждение: Nickname is already taken
-     
- - summary: |
-     регистрация на сайте пользователя с некорректным email. Тест 11
-   requirement: |
-     При регистрации у пользователя должен быть корректный email
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Nickname = Goryaminskaya
-     Email = goryaminskayaнетпароля.ru
-     Password = 123456
-   steps:
-     - нажимаем кнопку "Sign up"
-     - вводим Nickname 
-     - вводим Email 
-     - нажимаем кнопку "Submit" 
-   expected-result: |
-     Аккаунт не регистрируется: появляется предупреждение: Invalid email
-     
- - summary: |
-     регистрация на сайте пользователя с именем не менее 3 символов. Тест 12
-   requirement: |
-     При регистрации у пользователя должно быть имя длиной менее 3 символов
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Nickname = ЕА
-     Email = goryaminskaya@yandex.ru
-     Password = 123456
-   steps:
-     - нажимаем кнопку "Sign up"
-     - вводим Nickname 
-     - вводим Email 
-     - нажимаем кнопку "Submit" 
-   expected-result: |
-     Аккаунт не регистрируется: появляется предупреждение "Should be at least 3 characters"
-    
- - summary: |
-     регистрация на сайте пользователя с неуникальным email. Тест 13
-   requirement: |
-     У пользователя должен быть уникальный email
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Nickname = Goryaminskaya2
-     Email = goryaminskaya@yandex.ru
-     Password = 123456
-   steps:
-     - нажимаем кнопку "Sign up"
-     - вводим Nickname 
-     - вводим Email 
-     - нажимаем кнопку "Submit" 
-   expected-result: |
-     Аккаунт не регистрируется: появляется предупреждение: Email is already taken
-   
- - summary: |
-     Пользователь создает игру. Тест 14
-   requirement: |
-     Пользователь может создавать игру
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     -
-   steps:
-     - нажать "Create a game"
-   expected-result: |
-     Открываются настройки для создания игры
- 
- - summary: |
-     Пользователь изменяет настройки игры при создании игры. Тест 15
-   requirement: |
-    Пользователь может изменять настройки в разделе создания игры
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     - Level = "1"
-     - Game tipe = "with other users"
-     - Time control = 8 min
-     - Choose task by name or tags = "random task"
-   steps:
-     - нажать "Create a game" 
-     - выбрать Level
-     - выбрать Game tipe
-     - выбрать Time control
-     - выбрать Choose task by name or tags
-     - нажать "Create a batlle"
-   expected-result: |
-     Начинается батл с любым игроком   
-     
- - summary: |
-      Пользователь изменяет уровни сложности игры в настройка при создании игры.Тест 16
-   requirement: |
-    Пользователь может изменять сложность игры
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     - Level = "4"
-   steps:
-     - нажать "Create a game"
-     - выбрать Level
-   expected-result: |
-     Сложность установлена 4  
-   
- - summary: |
-     Пользователь изменяет сложность игры с 1 до 4.Тест 17
-   requirement: |
-    Пользователю доступны 4 уровня игры
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     - Level 1 = "1"
-     - Level 2 = "4"
-   steps:
-     - нажать "Create a game"
-     - выбрать Level 1
-     - выбрать Level 2
-   expected-result: |
-     Сложность изменена с 1 до 4  
-     
- - summary: |
-     Пользователь изменяет Game tipe при создании игры. Тест 18
-   requirement: |
-    Пользователь может изменять тип игры в настройках при создании игры
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     - Level = "1"
-     - Game tipe 1 = "with other users"
-     - Game tipe 2 = "with a bot"
-   steps:
-     - нажать "Create a game" 
-     - выбрать Level
-     - выбрать Game tipe 1
-     - выбрать Game tipe 2
-     - нажать "Create a batlle"
-   expected-result: |
-     Начинается любая игра с ботом   
-    
- - summary: |
-     Пользователь может играть с ботом Тест 19
-   requirement: |
-     Пользователю доступн "Game type" - "with a bot"
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     - Level = 1
-     - Game tipe = "with a bot"
-     - Time control = 8 min
-     - Choose task by name or tags = "random task"
-   steps:
-     - нажать "Create a game"
-     - выбрать Level
-     - выбрать Game tipe
-     - выбрать Time control
-     - Choose task by name or tags 
-     - нажать "Create a batlle"
-   expected-result: |
-     Начинается батл с ботом 
-     
- - summary: |
-     Пользователь может играть с другом Тест 20
-   requirement: |
-     Пользователю доступен "Game type" - "with a friend" (ссылка-приглашение к битве)
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     - Level = 1
-     - Game tipe = "with a freind"
-     - Time control = 8 min
-     - Choose task by name or tags = "random task"
-   steps:
-     - нажать "Create a game"
-     - выбрать Level
-     - выбрать Game tipe
-     - выбрать Time control
-     - Choose opponent - из выпадающего списка выбираем любого пользователя
-     - Choose task by name or tags = "random task"
-     - нажать "Create a batlle"
-   expected-result: |
-     Выбранный пользователь получает приглашение
-     
- - summary: |
-     Пользователь может играть с любым пользователем Тест 21
-   requirement: |
-     Пользователю доступен "Game type" - "with other users"
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     - Level = 1
-     - Game tipe = "with other users"
-     - Time control = 8 min
-     - Choose task by name or tags = "random task"
-   steps:
-     - нажать "Create a game"
-     - выбрать Level
-     - выбрать Game tipe
-     - выбрать Time control
-     - Choose opponent - из выпадающего списка выбираем любого пользователя
-     - Choose task by name or tags = "random task"
-     - нажать "Create a batlle"
-   expected-result: |
-     Выбранный пользователь получает приглашение   
-     
- - summary: |
-     Пользователь может выбрать количество времени, отведенное на задание  Тест 22
-   requirement: |
-      - Пользователю доступен выбор количества времени "Time control" при создании игры
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     - Level = 1
-     - Game tipe = "with a freind"
-     - Time control = 8 min
-     - Choose task by name or tags = "random task"
-   steps:
-     - нажать "Create a game"
-     - выбрать Level
-     - выбрать Game tipe
-     - выбрать Time control
-     - Choose opponent - из выпадающего списка выбираем любого пользователя
-     - Choose task by name or tags = "random task"
-     - нажать "Create a batlle"
-   expected-result: |
-     Выбранный пользователь получает приглашение 
-     
- - summary: |
-     Пользователь может выбрать задание  Тест 23
-   requirement: |
-      - Пользователю доступен выбор задания по названию "name"
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     - Level = 1
-     - Game tipe = "with a bot"
-     - Time control = 8 min
-     - Choose task by name or tags = "cube sum"
-   steps:
-     - нажать "Create a game"
-     - выбрать Level
-     - выбрать Game tipe
-     - выбрать Time control
-     - Выбрать Choose task by name or tags
-     - нажать "Create a batlle"
-   expected-result: |
-     Запускается задача рассчитать сумму чисел в кубе в массиве от 1 до n
-    
- - summary: |
-     Пользователь может выбрать задание по тегам  Тест 24
-   requirement: |
-     Пользователю доступен выбор задания по тегам "tags". 
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     - Level = 1
-     - Game tipe = "with a bot"
-     - Time control = 8 min
-     - Tags = "math"
-     - Choose task by name or tags = "random task"
-   steps:
-     - нажать "Create a game"
-     - выбрать Level
-     - выбрать Game 
-     - выбрать Time control
-     - выбрать Tags
-     - Выбрать Choose task by name or tags
-     - нажать "Create a batlle"
-   expected-result: |
-     Запускается задача любая задача из сферы математика 
-     
- - summary: |
-     Тест на отображение в рейтинге 
-   requirement: |
-     Каждый пользователь участвует в рейтинге (недельном, месячном, за весь период существования сайта)
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Пользователь зашел на сайт под своим аккаунтом
-   steps:
-     - нажимаем кнопку "TOPlist"
-     - нажимаем кнопку "Weekly" 
-     - нажимаем кнопку "Monthly" 
-     - нажимаем кнопку "Total"
-   expected-result: |
-     Пользователь может увидеть весь рейтинг
-
- - summary: |
-     Тест на совместимость сайта с последней версией Chrome Тест 26
-   requirement: |
-     Сайт должен быть протестирован на совместимость с последними версиями браузеров
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Пользователь зашел на сайт под своим аккаунтом, браузер Chrome
-   steps:
-     - нажать "Create a game"
-     - выбрать задание
-     - выбрать сложность задания
-     - "game tipe" = "with a bot"
-     - выбрать ограничение по времени = 8 min
-     - Choose task by name or tags = "random task"
-     - нажать "Create a batlle"
-   expected-result: |
-     Пользователь может создать битву и вызвать на нее игрока или бота
+- summary: |
+    Входа пользователя с существующими логином и паролем. Тест 2
+  requirement: |
+    Для входа в аккаунт легин и пароль должны быть корректны
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Nickname = Goryaminskaya
+    Email = goryaminskaya@yandex.ru 
+    Password = 123456
+  steps:
+    - нажимаем кнопку "Sign up"
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - нажимаем кнопку "Submit"
+  expected-result: |
+    Вход в аккаунт
      
 - summary: |
-     Тест на совместимость сайта с последней версией Opera Тест 27
-   requirement: |
-     Сайт должен быть протестирован на совместимость с последними версиями браузеров
-   prerequisites: |
-     Открыта страница сайта https://codebattle.hexlet.io
-   test-data: |
-     Пользователь зашел на сайт под своим аккаунтом, браузер Opera
-   steps:
-     - нажать "Create a game"
-     - выбрать задание
-     - выбрать сложность задания
-     - "game tipe" = "with a bot"
-     - выбрать ограничение по времени = 8 min
-     - Choose task by name or tags = "random task"
-     - нажать "Create a batlle"
-   expected-result: |
-     Пользователь может создать битву и вызвать на нее игрока или бота  
+    Вход пользователя с незарегистрированным логином и паролем. Тест 3 (нег.)
+  requirement: |
+    Для входа в аккаунт легин и пароль должны быть корректны
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Nickname = Goryaminskaya1
+    Email = goryaminskaya@mail.ru
+    Password = Qwerty1
+  steps:
+    - нажимаем кнопку "Sign up"
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - нажимаем кнопку "Submit"
+  expected-result: |
+    Сообщение о том, что аккаунта с таким email не существует
+    
+- summary: |
+    Вход пользователя с неправильным паролем. Тест 4
+  requirement: |
+    Для входа в аккаунт логин и пароль должны быть корректны
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Nickname = Goryaminskaya
+    Email = goryaminskaya@yandex.ru
+    Password = Qwerty2
+  steps:
+    - нажимаем кнопку "Sign up"
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - нажимаем кнопку "Submit"
+  expected-result: |
+    Сообщение о том, что  email неправильный
+ 
+- summary: |
+    Вход пользователя без ввода емейл и пароля. Тест 5 (нег.)
+  requirement: |
+    Для входа в аккаунт логин и пароль должны быть корректны
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+     -
+  steps:
+    - нажимаем кнопку "Sign up"
+    - Поле Email пустое
+    - Поле Password пустое
+    - нажимаем кнопку "Submit"
+  expected-result: |
+    Сообщение о том, что  email  "Email required" и пароль "Password required"
+     
+- summary: |
+    Восстановление забытого пароля. Тест 6.
+  requirement: |
+    Зарегистрированный пользователь может восстановить забытый пароль по "email".
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password).
+  test-data: |
+    "Email" = "goryaminskaya@yandex.ru"
+    "Password"(new) = "Qwerty2"
+  steps:
+    - Нажимаем на надпись "Forgot your password?" под полем ввода password
+    - Вводим "Email"
+    - Нажимаем кнопку "Submit"
+    - Заходим на страницу почты пользователя
+    - Открываем письмо от noreply@codebattle-5f929.firebaseapp.com
+    - Нажимаем на ссылку в теле письма
+    - На странице "Reset your password" вводим новый пароль
+    - Нажимаем кнопку "Save"
+    - Переходим на страницу (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password)
+    - Вводим "Email"
+    - Вводим "Password"
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Отображена главная страница "CodeBattle" (https://codebattle.hexlet.io/#lobby)
+    В правом верхнем углу отображены данные (аватар, Nickname) указанного пользователя.
+     
+- summary: |
+    Вход пользователя по Discord. Тест 7
+  requirement: |
+    Пользователь может войти без регистрации на сайт, используя аккаунт Discord
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Пользователь зарегистриован на https://discord.com/
+  steps:
+    - нажимаем кнопку "Sign up"
+    - нажимаем кнопку "Sign in with Discord"
+    - на редиректе Discord нажать "Авторизовать"
+  expected-result: |
+    Вход в аккаунт, отображена главная страница сайта https://codebattle.hexlet.io
+    
+- summary: |
+    Вход пользователя по Github. Тест 8
+  requirement: |
+     - Пользователь может войти без регистрации на сайт, используя аккаунт Github
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Пользователь зарегистриован на https://github.com/
+  steps:
+    - нажимаем кнопку "Sign up"
+    - нажимаем кнопку "Sign in with Github"
+    - на редиректе Github нажать "Авторизовать"
+  expected-result: |
+    Вход в аккаунт, отображена главная страница сайта https://codebattle.hexlet.io
+     
+- summary: |
+    регистрация на сайте пользователя с паролем менее 6 знаков. Тест 9
+  requirement: |
+    Пароль должен содержать не менее 6 символов русского, английского языка или спецсимволов
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Nickname = Екатеринa
+    Email = goryaminskaya1@yandex.ru
+    Password = 123
+  steps:
+    - нажимаем кнопку "Sign up"
+    - вводим Nickname 
+    - вводим Email 
+    - вводим Password
+    - нажимаем кнопку "Submit"
+  expected-result: |
+    Аккаунт не регистрируется: появляется предупреждение "WEAK_PASSWORD : Password should be at least 6 characters"
+          
+- summary: |
+    регистрация на сайте пользователя с неуникальный Nickname. Тест 10
+  requirement: |
+    У пользователя должен быть уникальный Nickname
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Nickname = Goryaminskaya
+    Email = goryaminskaya@yandex.ru
+    Password = 123456
+  steps:
+    - нажимаем кнопку "Sign up"
+    - вводим Nickname 
+    - вводим Email 
+    - нажимаем кнопку "Submit" 
+  expected-result: |
+    Аккаунт не регистрируется: появляется предупреждение: Nickname is already taken
+     
+- summary: |
+    регистрация на сайте пользователя с некорректным email. Тест 11
+  requirement: |
+    При регистрации у пользователя должен быть корректный email
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Nickname = Goryaminskaya
+    Email = goryaminskayaнетпароля.ru
+    Password = 123456
+  steps:
+    - нажимаем кнопку "Sign up"
+    - вводим Nickname 
+    - вводим Email 
+    - нажимаем кнопку "Submit" 
+  expected-result: |
+    Аккаунт не регистрируется: появляется предупреждение: Invalid email
+     
+- summary: |
+    регистрация на сайте пользователя с именем не менее 3 символов. Тест 12
+  requirement: |
+    При регистрации у пользователя должно быть имя длиной менее 3 символов
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Nickname = ЕА
+    Email = goryaminskaya@yandex.ru
+    Password = 123456
+  steps:
+    - нажимаем кнопку "Sign up"
+    - вводим Nickname 
+    - вводим Email 
+    - нажимаем кнопку "Submit" 
+  expected-result: |
+    Аккаунт не регистрируется: появляется предупреждение "Should be at least 3 characters"
+    
+- summary: |
+    регистрация на сайте пользователя с неуникальным email. Тест 13
+  requirement: |
+    У пользователя должен быть уникальный email
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Nickname = Goryaminskaya2
+    Email = goryaminskaya@yandex.ru
+    Password = 123456
+  steps:
+    - нажимаем кнопку "Sign up"
+    - вводим Nickname 
+    - вводим Email 
+    - нажимаем кнопку "Submit" 
+  expected-result: |
+    Аккаунт не регистрируется: появляется предупреждение: Email is already taken
+   
+- summary: |
+    Пользователь создает игру. Тест 14
+  requirement: |
+    Пользователь может создавать игру
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    -
+  steps:
+    - нажать "Create a game"
+  expected-result: |
+    Открываются настройки для создания игры
+ 
+- summary: |
+    Пользователь изменяет настройки игры при создании игры. Тест 15
+  requirement: |
+    Пользователь может изменять настройки в разделе создания игры
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    - Level = "1"
+    - Game tipe = "with other users"
+    - Time control = 8 min
+    - Choose task by name or tags = "random task"
+  steps:
+    - нажать "Create a game" 
+    - выбрать Level
+    - выбрать Game tipe
+    - выбрать Time control
+    - выбрать Choose task by name or tags
+    - нажать "Create a batlle"
+  expected-result: |
+    Начинается батл с любым игроком   
+     
+- summary: |
+    Пользователь изменяет уровни сложности игры в настройка при создании игры.Тест 16
+  requirement: |
+    Пользователь может изменять сложность игры
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    - Level = "4"
+  steps:
+    - нажать "Create a game"
+    - выбрать Level
+  expected-result: |
+    Сложность установлена 4  
+   
+- summary: |
+    Пользователь изменяет сложность игры с 1 до 4.Тест 17
+  requirement: |
+    Пользователю доступны 4 уровня игры
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    - Level 1 = "1"
+    - Level 2 = "4"
+  steps:
+    - нажать "Create a game"
+    - выбрать Level 1
+    - выбрать Level 2
+  expected-result: |
+    Сложность изменена с 1 до 4  
+     
+- summary: |
+    Пользователь изменяет Game tipe при создании игры. Тест 18
+  requirement: |
+    Пользователь может изменять тип игры в настройках при создании игры
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    - Level = "1"
+    - Game tipe 1 = "with other users"
+    - Game tipe 2 = "with a bot"
+  steps:
+    - нажать "Create a game" 
+    - выбрать Level
+    - выбрать Game tipe 1
+    - выбрать Game tipe 2
+    - нажать "Create a batlle"
+  expected-result: |
+    Начинается любая игра с ботом   
+    
+- summary: |
+    Пользователь может играть с ботом Тест 19
+  requirement: |
+    Пользователю доступн "Game type" - "with a bot"
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    - Level = 1
+    - Game tipe = "with a bot"
+    - Time control = 8 min
+    - Choose task by name or tags = "random task"
+  steps:
+    - нажать "Create a game"
+    - выбрать Level
+    - выбрать Game tipe
+    - выбрать Time control
+    - Choose task by name or tags 
+    - нажать "Create a batlle"
+  expected-result: |
+    Начинается батл с ботом 
+     
+- summary: |
+    Пользователь может играть с другом Тест 20
+  requirement: |
+    Пользователю доступен "Game type" - "with a friend" (ссылка-приглашение к битве)
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    - Level = 1
+    - Game tipe = "with a freind"
+    - Time control = 8 min
+    - Choose task by name or tags = "random task"
+  steps:
+    - нажать "Create a game"
+    - выбрать Level
+    - выбрать Game tipe
+    - выбрать Time control
+    - Choose opponent - из выпадающего списка выбираем любого пользователя
+    - Choose task by name or tags = "random task"
+    - нажать "Create a batlle"
+  expected-result: |
+    Выбранный пользователь получает приглашение
+    
+- summary: |
+    Пользователь может играть с любым пользователем Тест 21
+  requirement: |
+    Пользователю доступен "Game type" - "with other users"
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    - Level = 1
+    - Game tipe = "with other users"
+    - Time control = 8 min
+    - Choose task by name or tags = "random task"
+  steps:
+    - нажать "Create a game"
+    - выбрать Level
+    - выбрать Game tipe
+    - выбрать Time control
+    - Choose opponent - из выпадающего списка выбираем любого пользователя
+    - Choose task by name or tags = "random task"
+    - нажать "Create a batlle"
+  expected-result: |
+    Выбранный пользователь получает приглашение   
+    
+- summary: |
+    Пользователь может выбрать количество времени, отведенное на задание  Тест 22
+  requirement: |
+    Пользователю доступен выбор количества времени "Time control" при создании игры
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    - Level = 1
+    - Game tipe = "with a freind"
+    - Time control = 8 min
+    - Choose task by name or tags = "random task"
+  steps:
+    - нажать "Create a game"
+    - выбрать Level
+    - выбрать Game tipe
+    - выбрать Time control
+    - Choose opponent - из выпадающего списка выбираем любого пользователя
+    - Choose task by name or tags = "random task"
+    - нажать "Create a batlle"
+  expected-result: |
+    Выбранный пользователь получает приглашение 
+    
+- summary: |
+    Пользователь может выбрать задание  Тест 23
+  requirement: |
+    Пользователю доступен выбор задания по названию "name"
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    - Level = 1
+    - Game tipe = "with a bot"
+    - Time control = 8 min
+    - Choose task by name or tags = "cube sum"
+  steps:
+    - нажать "Create a game"
+    - выбрать Level
+    - выбрать Game tipe
+    - выбрать Time control
+    - Выбрать Choose task by name or tags
+    - нажать "Create a batlle"
+  expected-result: |
+    Запускается задача рассчитать сумму чисел в кубе в массиве от 1 до n
+    
+- summary: |
+    Пользователь может выбрать задание по тегам  Тест 24
+  requirement: |
+    Пользователю доступен выбор задания по тегам "tags". 
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    - Level = 1
+    - Game tipe = "with a bot"
+    - Time control = 8 min
+    - Tags = "math"
+    - Choose task by name or tags = "random task"
+  steps:
+    - нажать "Create a game"
+    - выбрать Level
+    - выбрать Game 
+    - выбрать Time control
+    - выбрать Tags
+    - Выбрать Choose task by name or tags
+    - нажать "Create a batlle"
+  expected-result: |
+    Запускается задача любая задача из сферы математика 
+     
+- summary: |
+    Тест на отображение в рейтинге Тест 25
+  requirement: |
+    Каждый пользователь участвует в рейтинге (недельном, месячном, за весь период существования сайта)
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Пользователь зашел на сайт под своим аккаунтом
+  steps:
+    - нажимаем кнопку "TOPlist"
+    - нажимаем кнопку "Weekly" 
+    - нажимаем кнопку "Monthly" 
+    - нажимаем кнопку "Total"
+  expected-result: |
+    Пользователь может увидеть весь рейтинг
+
+- summary: |
+    Тест на совместимость сайта с последней версией Chrome Тест 26
+  requirement: |
+    Сайт должен быть протестирован на совместимость с последними версиями браузеров
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Пользователь зашел на сайт под своим аккаунтом, браузер Chrome
+  steps:
+    - нажать "Create a game"
+    - выбрать задание
+    - выбрать сложность задания
+    - "game tipe" = "with a bot"
+    - выбрать ограничение по времени = 8 min
+    - Choose task by name or tags = "random task"
+    - нажать "Create a batlle"
+  expected-result: |
+    Пользователь может создать битву и вызвать на нее игрока или бота
+     
+- summary: |
+    Тест на совместимость сайта с последней версией Opera Тест 27
+  requirement: |
+    Сайт должен быть протестирован на совместимость с последними версиями браузеров
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Пользователь зашел на сайт под своим аккаунтом, браузер Opera
+  steps:
+    - нажать "Create a game"
+    - выбрать задание
+    - выбрать сложность задания
+    - "game tipe" = "with a bot"
+    - выбрать ограничение по времени = 8 min
+    - Choose task by name or tags = "random task"
+    - нажать "Create a batlle"
+  expected-result: |
+    Пользователь может создать битву и вызвать на нее игрока или бота  
      
 - summary: |
     Тест на совместимость сайта с последней версией Yandex Тест 28
