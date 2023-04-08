@@ -512,7 +512,7 @@
     Сайт должен быть протестирован на совместимость с последними версиями браузеров
   prerequisites: |
     Открыта страница сайта https://codebattle.hexlet.io
-  test-data:
+  test-data: |
     Пользователь зашел на сайт под своим аккаунтом, браузер Yandex
   steps:
     - нажать "Create a game"
@@ -531,7 +531,7 @@
     Пользователь может наблюдать за чужими играми
   prerequisites: |
     Открыта страница сайта https://codebattle.hexlet.io
-  test-data:
+  test-data: |
     Пользователь зашел на сайт под своим аккаунтом
   steps:
     - нажать "Complited games"
@@ -546,7 +546,7 @@
     Сайтом можно пользоваться на двух языках - русский и английский
   prerequisites: |
     Открыта страница сайта https://codebattle.hexlet.io
-  test-data:
+  test-data: |
     Пользователь зашел на сайт под своим аккаунтом
   steps:
     - нажать "language"
