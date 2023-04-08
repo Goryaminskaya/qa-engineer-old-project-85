@@ -1,40 +1,41 @@
---
-- summary: |
-    регистрация на сайте
-  status: pass
+---
+test-cases:
+ - summary: |
+     регистрация на сайте
+   status: pass
      
-- summary: |
-    Проверка входа пользователя с несуществующими логином и паролем
-  status: pass
+ - summary: |
+     Проверка входа пользователя с несуществующими логином и паролем
+   status: pass
          
-- summary: |
-    Тест на возможность играть с ботом
-  status: pass
+ - summary: |
+     Тест на возможность играть с ботом
+   status: pass
      
-- summary: |
-    Тест на возможность играть с другом
-  status: pass
+ - summary: |
+     Тест на возможность играть с другом
+   status: pass
      
-- summary: |
-    Тест на отображение в рейтинге
-  status: pass
+ - summary: |
+     Тест на отображение в рейтинге
+   status: pass
 
-- summary: |
-    Тест на совместимость сайта с последней версией Chrome
-  status: pass
+ - summary: |
+     Тест на совместимость сайта с последней версией Chrome
+   status: pass
      
-- summary: |
-    Тест на совместимость сайта с последней версией Opera
-  status: pass
+ - summary: |
+     Тест на совместимость сайта с последней версией Opera
+   status: pass
      
-- summary: |
-    Тест на совместимость сайта с последней версией Yandex
-  status: pass     
+ - summary: |
+     Тест на совместимость сайта с последней версией Yandex
+   status: pass     
     
-- summary: |
-    Тест на возможность наблюдать за чужими играми
-  status: pass
+ - summary: |
+     Тест на возможность наблюдать за чужими играми
+   status: pass
     
-- summary: |
-    Тест на замену языка сайта
-  status: fail  
+ - summary: |
+     Тест на замену языка сайта
+   status: fail  
