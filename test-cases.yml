@@ -95,7 +95,7 @@
     Восстановление забытого пароля. Тест 6.
   requirement: |
     Зарегистрированный пользователь может восстановить забытый пароль по "email".
-  prerequisites:
+  prerequisites: |
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password).
   test-data: |
     "Email" = "goryaminskaya@yandex.ru"
