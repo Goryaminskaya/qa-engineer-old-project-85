@@ -98,8 +98,8 @@
   prerequisites: |
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password).
   test-data: |
-    "Email" = "goryaminskaya@yandex.ru"
-    "Password"(new) = "Qwerty2"
+    Email = "goryaminskaya@yandex.ru"
+    Password (new) = "Qwerty2"
   steps:
     - Нажимаем на надпись "Forgot your password?" под полем ввода password
     - Вводим "Email"
@@ -480,7 +480,7 @@
     - нажать "Create a game"
     - выбрать задание
     - выбрать сложность задания
-    - "game tipe" = "with a bot"
+    - game tipe = "with a bot"
     - выбрать ограничение по времени = 8 min
     - Choose task by name or tags = "random task"
     - нажать "Create a batlle"
@@ -499,7 +499,7 @@
     - нажать "Create a game"
     - выбрать задание
     - выбрать сложность задания
-    - "game tipe" = "with a bot"
+    - game tipe = "with a bot"
     - выбрать ограничение по времени = 8 min
     - Choose task by name or tags = "random task"
     - нажать "Create a batlle"
@@ -518,7 +518,7 @@
     - нажать "Create a game"
     - выбрать задание
     - выбрать сложность задания
-    - "game tipe" = "with a bot"
+    - game tipe = "with a bot"
     - выбрать ограничение по времени = 8 min
     - Choose task by name or tags = "random task"
     - нажать "Create a batlle"
