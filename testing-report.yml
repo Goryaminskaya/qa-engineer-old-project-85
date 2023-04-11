@@ -1,6 +1,4 @@
 ---
-test-cases:
----
 - summary: |
     регистрация на сайте. Тест 1
   status: pass
@@ -32,7 +30,7 @@ test-cases:
 - summary: |
     Вход пользователя по Github. Тест 8
   status: pass
-     
+  
 - summary: |
     регистрация на сайте пользователя с паролем менее 6 знаков. Тест 9
   status: pass
@@ -120,4 +118,4 @@ test-cases:
 - summary: |
     Тест на замену языка сайта Тест 30
   status: fail
-  
+ 
